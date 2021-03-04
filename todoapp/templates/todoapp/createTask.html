@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <!-- CSS only -->
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">-->
+
+</head>
+<body>
+<div class="container">
+<form method="post" action="{% url 'add' %}">
+    {%csrf_token%}
+    <!-- cross site request forgery-->
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4"><h2>Create your Task</h2></div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <label for="">taskname</label>
+            <input type="text" name="task">
+            <input type="submit" value="create" name="" id="">
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+</form>
+</div>
+
+</body>
+</html>
